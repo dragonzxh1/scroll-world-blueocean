@@ -8,3 +8,11 @@ prototype-desktop-top.png
 # 系统/编辑器文件
 .DS_Store
 Thumbs.db
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+
+# 浏览器验证截图
+.playwright-mcp/
