@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>兰洋科技 BLUEOCEAN · 液冷世界</title>
+  <meta name="description" content="滚动进入兰洋科技面向算力中心与新能源行业的液冷技术、系统方案与规模化交付能力。" />
+  <style>
+    :root,
+    .sw-root {
+      --sw-bg: #edf6fa;
+      --sw-ink: #073c5b;
+      --sw-ink-soft: #527185;
+      --sw-accent: #0e74b5;
+      --sw-font-display: "Microsoft YaHei UI", "PingFang SC", system-ui, sans-serif;
+      --sw-font-body: "Microsoft YaHei UI", "PingFang SC", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    .prototype-badge {
+      position: fixed;
+      z-index: 80;
+      left: clamp(18px, 5vw, 64px);
+      bottom: 22px;
+      padding: 8px 12px;
+      border: 1px solid rgba(7, 87, 134, 0.2);
+      border-radius: 999px;
+      color: #527185;
+      background: rgba(237, 246, 250, 0.78);
+      backdrop-filter: blur(12px);
+      font: 600 11px/1.2 "Microsoft YaHei UI", sans-serif;
+      letter-spacing: 0.08em;
+    }
+
+    .channel-panel {
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: #073c5b;
+      background: rgba(3, 32, 49, 0.66);
+      backdrop-filter: blur(18px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 220ms ease, visibility 220ms ease;
+    }
+
+    .channel-panel:target {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .channel-panel__card {
+      position: relative;
+      width: min(880px, 100%);
+      padding: clamp(24px, 4vw, 52px);
+      border: 1px solid rgba(255, 255, 255, 0.74);
+      border-radius: 28px;
+      background: rgba(245, 251, 253, 0.97);
+      box-shadow: 0 28px 80px rgba(2, 47, 72, 0.28);
+    }
+
+    .channel-panel__close {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      color: #073c5b;
+      background: #e4f2f8;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .channel-panel h2 {
+      margin: 0;
+      font-size: clamp(26px, 4vw, 44px);
+      letter-spacing: -0.04em;
+    }
+
+    .channel-panel__lead {
+      max-width: 58ch;
+      margin: 12px 0 28px;
+      color: #527185;
+      line-height: 1.65;
+    }
+
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .channel-item {
+      min-height: 210px;
+      padding: 18px;
+      border: 1px solid #cde3ec;
+      border-radius: 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .channel-item img,
+    .channel-item__placeholder {
+      width: 132px;
+      height: 132px;
+      margin: 0 auto 12px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: #f1f8fb;
+    }
+
+    .channel-item__placeholder {
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      color: #0e74b5;
+      border: 1px dashed #83bfd8;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .channel-item strong { display: block; font-size: 15px; }
+    .channel-item span { display: block; margin-top: 5px; color: #698596; font-size: 12px; }
+
+    @media (max-width: 760px) {
+      .prototype-badge { bottom: 14px; }
+      .channel-grid { grid-template-columns: 1fr; max-height: 58vh; overflow: auto; }
+      .channel-item { min-height: 176px; }
+      .channel-item img,
+      .channel-item__placeholder { width: 104px; height: 104px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <main id="world" aria-label="兰洋科技液冷世界"></main>
+  <div class="prototype-badge">SCROLL-WORLD · 工业液冷概念版</div>
+
+  <section id="channels" class="channel-panel" aria-label="兰洋科技内容频道">
+    <div class="channel-panel__card">
+      <a class="channel-panel__close" href="#" aria-label="关闭">×</a>
+      <h2>继续关注兰洋液冷</h2>
+      <p class="channel-panel__lead">
+        公众号和视频号在本方案中是技术内容与项目案例的传播入口，不作为主营业务场景。下列两个微信二维码来自兰洋科技官网；视频号入口将在取得真实分享链接或二维码后接入。
+      </p>
+      <div class="channel-grid">
+        <article class="channel-item">
+          <img src="assets/brand/wechat-service.png" alt="兰洋科技服务号二维码" />
+          <strong>兰洋科技服务号</strong>
+          <span>扫码关注服务号</span>
+        </article>
+        <article class="channel-item">
+          <img src="assets/brand/wechat-subscription.png" alt="兰洋科技订阅号二维码" />
+          <strong>兰洋科技订阅号</strong>
+          <span>阅读技术与企业动态</span>
+        </article>
+        <article class="channel-item">
+          <div class="channel-item__placeholder">VIDEO CHANNEL<br />视频号真实入口待接入</div>
+          <strong>兰洋科技视频号</strong>
+          <span>替换为视频号二维码或分享链接</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      brand: {
+        name: '兰洋科技 BLUEOCEAN',
+        logo: 'assets/brand/blueocean-logo.png',
+        href: 'https://www.blueocean-china.net/'
+      },
+      cta: { label: '访问官网', href: 'https://www.blueocean-china.net/' },
+      hint: '滚动进入液冷世界',
+      diveScroll: 1.45,
+      connScroll: 0.8,
+      crossfade: 0.16,
+      sections: [
+        {
+          id: 'compute-center',
+          label: '算力热密度',
+          still: 'assets/scenes/01-compute-center.png',
+          accent: '#0e74b5',
+          scroll: 1.75,
+          linger: 0.42,
+          eyebrow: 'COMPUTING CENTER · 高密度算力',
+          title: '算力越密，散热越不能只靠风。',
+          body: '面向 AI 与高性能计算中心，用液体把芯片热量带离机柜，让高功率密度部署拥有更稳定、更安静、更高效的热管理底座。',
+          tags: ['官网数据：较风冷节能约 50%', '70kW/㎡ 高密度部署', '全天候稳定运行']
+        },
+        {
+          id: 'cold-plate',
+          label: '芯片冷板',
+          still: 'assets/scenes/02-cold-plate.png',
+          accent: '#08a9c4',
+          scroll: 1.52,
+          linger: 0.32,
+          eyebrow: 'COLD PLATE · 间接液冷',
+          title: '从芯片表面，建立最短散热路径。',
+          body: '微流道冷板紧贴 CPU、GPU 等高热流密度器件，通过供回液管路、歧管与 CDU 形成闭环，把热量精准地送往换热端。',
+          tags: ['微流道冷板', '气液 / 液液换热', '冷板 CDU']
+        },
+        {
+          id: 'immersion',
+          label: '机柜浸没',
+          still: 'assets/scenes/03-immersion.png',
+          accent: '#087db2',
+          scroll: 1.56,
+          linger: 0.35,
+          eyebrow: 'IMMERSION · 直接液冷',
+          title: '让服务器进入冷却介质，而不是让风追着热跑。',
+          body: '面向 2U 与 GPU 服务器，浸没式矩阵集成与单模块系统让冷却介质直接接触发热部件，覆盖高密部署、扩容与运维场景。',
+          tags: ['浸没式 GPU 服务器', '矩阵集成系统', '单模块系统']
+        },
+        {
+          id: 'infrastructure',
+          label: '液冷基础设施',
+          still: 'assets/scenes/04-infrastructure.png',
+          accent: '#286792',
+          scroll: 1.58,
+          linger: 0.32,
+          eyebrow: 'INFRASTRUCTURE · 系统级交付',
+          title: '冷板、CDU、泵组与换热端，必须是一套系统。',
+          body: '从机柜二次侧到一次侧冷源，围绕流量、压力、温度、水质与冗余进行整体设计，以模块化设备和 PLC 控制构建可维护的液冷基础设施。',
+          tags: ['一次 / 二次侧闭环', 'PLC 逻辑控制', '模块化部署']
+        },
+        {
+          id: 'new-energy',
+          label: '新能源热管理',
+          still: 'assets/scenes/05-new-energy.png',
+          accent: '#137da2',
+          scroll: 1.55,
+          linger: 0.3,
+          eyebrow: 'NEW ENERGY · 电池温控',
+          title: '电池的安全与寿命，也取决于温度是否均匀。',
+          body: '面向动力电池与储能电池，以液冷板、流道、泵组和换热系统控制温差与热失控风险，让新能源设备在充放电循环中保持稳定热环境。',
+          tags: ['动力电池液冷', '储能电池温控', '温差与安全管理']
+        },
+        {
+          id: 'delivery',
+          label: '规模化交付',
+          still: 'assets/scenes/06-delivery.png',
+          accent: '#0bb8d1',
+          scroll: 1.82,
+          linger: 0.46,
+          eyebrow: 'DELIVERY · 从研发到现场',
+          title: '把液冷能力，从样机送到真实现场。',
+          body: '从冷板、CDU 与浸没设备的制造，到耐压、气密和热性能验证，再到算力中心与新能源项目部署，形成可复制的工程交付链路。',
+          tags: ['制造与装配', '压力 / 泄漏 / 热测试', '算力中心 + 新能源'],
+          cta: {
+            primary: { label: '进入兰洋科技官网', href: 'https://www.blueocean-china.net/' },
+            secondary: { label: '关注公众号与视频号', href: '#channels' }
+          }
+        }
+      ],
+      connectors: []
+    });
+  </script>
+</body>
+</html>
